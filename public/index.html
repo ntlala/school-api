@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Student Records</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📚 School Student Records</h1>
+
+    <form id="studentForm">
+      <input type="hidden" id="studentId" />
+      <input type="text" id="name" placeholder="Name" required />
+      
+      <select id="grade" required>
+        <option value="">Select Grade</option>
+        <option value="Grade 1">Grade 1</option>
+        <option value="Grade 2">Grade 2</option>
+        <option value="Grade 3">Grade 3</option>
+        <option value="Grade 4">Grade 4</option>
+        <option value="Grade 5">Grade 5</option>
+        <option value="Grade 6">Grade 6</option>
+        <option value="Grade 7">Grade 7</option>
+        <option value="Grade 9">Grade 9</option>
+      </select>
+
+      <input type="text" id="contact" placeholder="Contact" />
+
+      <button type="submit" id="submitBtn">Add Student</button>
+      <button type="button" id="cancelBtn" class="hidden">Cancel</button>
+    </form>
+
+    <div class="filter-search">
+      <input type="text" id="searchName" placeholder="Search by name..." />
+      <select id="filterGrade">
+        <option value="">Filter by grade</option>
+        <option value="Grade 1">Grade 1</option>
+        <option value="Grade 2">Grade 2</option>
+        <option value="Grade 3">Grade 3</option>
+        <option value="Grade 4">Grade 4</option>
+        <option value="Grade 5">Grade 5</option>
+        <option value="Grade 6">Grade 6</option>
+        <option value="Grade 7">Grade 7</option>
+        <option value="Grade 9">Grade 9</option>
+      </select>
+      <button id="clearFiltersBtn">Clear Filters</button>
+    </div>
+
+    <h2>Student List</h2>
+    <table id="studentsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Grade</th>
+          <th>Contact</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
